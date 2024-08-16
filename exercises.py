@@ -11,6 +11,15 @@ class Game:
 
     def play_game(self):
         print("Welcome to Tic-Tac-Toe!")
+        while not self.winner and not self.tie:
+            self.render()
+            self.get_move()
+            self.check_for_winner()
+            self.check_for_tie()
+            if not self.winner and not self.tie:
+                self.switch_turn()
+        self.render()
+
 
     if __name__ == "__main__":
         game_instance = Game()
