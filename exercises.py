@@ -69,3 +69,6 @@ class Game:
     def check_for_tie(self):
         if all(value is not None for value in self.board.values()) and not self.winner:
             self.tie = True
+
+    def switch_turn(self):
+        self.turn = 'O' if self.turn == 'X' else 'X'
