@@ -1,7 +1,7 @@
 class Game:
     def __init__(self):
         self.turn = 'X'
-        self.tire = False
+        self.tie = False
         self.winner = None
         self.board = {
             'a1': None, 'b1': None, 'c1': None,
@@ -21,9 +21,6 @@ class Game:
         self.render()
 
 
-    if __name__ == "__main__":
-        game_instance = Game()
-        game_instance.play_game()
 
     def print_board(self):
         b = self.board
@@ -81,3 +78,7 @@ class Game:
 
     def switch_turn(self):
         self.turn = 'O' if self.turn == 'X' else 'X'
+
+if __name__ == "__main__":
+    game_instance = Game()
+    game_instance.play_game()
