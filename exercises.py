@@ -66,3 +66,6 @@ class Game:
                 return True
         return False
 
+    def check_for_tie(self):
+        if all(value is not None for value in self.board.values()) and not self.winner:
+            self.tie = True
